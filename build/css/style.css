@@ -426,7 +426,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   font-family: "Futura PT", "Arial", sans-serif;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -617,13 +617,13 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 120px;
 }
 
 .header {
-  padding: 28px 0;
+  padding: 22px 0;
   background-color: #000000;
 }
 
@@ -631,10 +631,17 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header__logo {
   color: #ffffff;
+}
+
+.header .btn {
+  margin-left: auto;
 }
 
 .main-nav__list {
@@ -783,13 +790,16 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 12px 32px;
+  font-weight: 500;
   color: #ffffff;
-  background-color: #2c39f2;
+  background-color: #ec3f3f;
   border: none;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: background-color 0.3s ease, border 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
 .btn--red {
@@ -801,7 +811,8 @@ button,
 }
 
 .btn--secondary {
-  background-color: rgba(236, 63, 63, 0.1);
+  background-color: rgba(236, 63, 63, 0.15);
+  border: 1px solid rgba(236, 63, 63, 0.8);
 }
 
 .btn:disabled {
@@ -810,7 +821,9 @@ button,
 }
 
 .btn.focus-visible:focus {
-  opacity: 0.8;
+  background-color: #ff1e1e;
+  -webkit-box-shadow: 0px 2px 24px 0px rgba(255, 30, 30, 0.5);
+  box-shadow: 0px 2px 24px 0px rgba(255, 30, 30, 0.5);
 }
 
 /* @mixin hover-focus {
@@ -856,19 +869,28 @@ button,
 
 @media (max-width: 1439px) {
   .container {
-    padding: 0 32px;
+    padding: 0 64px;
   }
 }
 
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    padding: 0 64px;
+  }
+
+  .header {
+    padding: 13px 0;
   }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+
+  .header__logo {
+    width: 106px;
+    height: 36px;
   }
 
   .modal__wrapper {
@@ -885,8 +907,27 @@ button,
   }
 }
 
+@media (max-width: 374px) {
+  .header .btn {
+    padding: 13px 25px;
+  }
+
+  .header {
+    padding: 16px 0;
+  }
+}
+
+@media (max-width: 359px) {
+  .header .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
+    background-color: #ff1e1e;
+    -webkit-box-shadow: 0px 2px 24px 0px rgba(255, 30, 30, 0.5);
+    box-shadow: 0px 2px 24px 0px rgba(255, 30, 30, 0.5);
   }
 }

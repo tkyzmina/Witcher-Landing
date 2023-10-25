@@ -36,29 +36,13 @@
   <div class="wrapper">
     <header class="header ">
       <div class="container">
-        <span class="header__logo">
-          Логотип
-        </span>
-        <nav class="main-nav">
-          <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xlink:href="#icon-burger"></use>
-            </svg>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Страница 1</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Страница 2</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Страница 3</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <a class="header__logo" href="#" aria-label="Главная страница">
+          <picture>
+            <source type="image/webp" srcset="img/content/logo-desktop.webp, img/content/logo-desktop@2x.webp 2x">
+            <img src="img/content/logo-desktop.png" srcset="img/content/logo-desktop@2x.png 2x" width="130" height="44" alt="Logo Witcher">
+          </picture>
+        </a>
+        <a class="btn btn--secondary" href="#" type="button">Подключить подписку</a>
       </div>
     </header>
     <main>
