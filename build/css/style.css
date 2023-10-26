@@ -622,8 +622,22 @@ button,
   padding: 0 120px;
 }
 
+.h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 56px;
+  font-style: normal;
+  line-height: 56px;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
-  padding: 22px 0;
+  padding: 22px 0 20px;
   background-color: #000000;
 }
 
@@ -674,6 +688,38 @@ button,
 .footer {
   padding: 40px 0;
   background-color: #343338;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__logo {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.footer__link {
+  color: #ffffff;
+  opacity: 0.7;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  max-width: 185px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.footer__link:hover {
+  opacity: 1;
 }
 
 .modal {
@@ -815,6 +861,10 @@ button,
   border: 1px solid rgba(236, 63, 63, 0.8);
 }
 
+.btn--md {
+  padding: 16px 42px;
+}
+
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -824,6 +874,73 @@ button,
   background-color: #ff1e1e;
   -webkit-box-shadow: 0px 2px 24px 0px rgba(255, 30, 30, 0.5);
   box-shadow: 0px 2px 24px 0px rgba(255, 30, 30, 0.5);
+}
+
+.promo {
+  position: relative;
+}
+
+.promo .container:first-of-type {
+  padding: 0;
+}
+
+.promo .container:last-of-type {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.promo__content {
+  max-width: 36%;
+  min-width: 410px;
+  padding-top: 104px;
+  padding-bottom: 100px;
+}
+
+.promo__title {
+  margin-bottom: 24px;
+}
+
+.promo__text {
+  margin-bottom: 40px;
+}
+
+.promo__image {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 440px;
+  background-image: url(../img/bg/promo-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__item {
+  margin-right: 20px;
+}
+
+.socials svg #circle {
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+.socials .socials__link:hover > svg #circle {
+  fill: #ff1e1e;
 }
 
 /* @mixin hover-focus {
@@ -878,8 +995,36 @@ button,
     padding: 0 64px;
   }
 
+  .h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
   .header {
     padding: 13px 0;
+  }
+
+  .btn--md {
+    padding: 16px 40px;
+  }
+
+  .promo__content {
+    max-width: 50%;
+    padding-top: 60px;
+    padding-bottom: 92px;
+  }
+
+  .promo__title {
+    margin-bottom: 16px;
+  }
+
+  .promo__text {
+    margin-bottom: 32px;
+  }
+
+  .promo__image {
+    height: 360px;
+    background-image: url(../img/bg/promo-bg-tablet.jpg);
   }
 }
 
@@ -891,6 +1036,31 @@ button,
   .header__logo {
     width: 106px;
     height: 36px;
+  }
+
+  .footer {
+    padding: 28px 0 25px;
+  }
+
+  .footer__inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+  }
+
+  .footer__socials {
+    margin-left: auto;
+  }
+
+  .footer__link {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 26px;
   }
 
   .modal__wrapper {
@@ -905,15 +1075,48 @@ button,
   .modal--fit-content .modal__content {
     width: 100%;
   }
+
+  .promo__content {
+    min-width: 300px;
+  }
 }
 
 @media (max-width: 374px) {
+  .h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
   .header .btn {
     padding: 13px 25px;
   }
 
   .header {
     padding: 16px 0;
+  }
+
+  .btn--md {
+    padding: 14px 34px;
+  }
+
+  .promo__content {
+    max-width: 80%;
+    min-width: 0;
+    padding-top: 56px;
+    padding-bottom: 73px;
+  }
+
+  .promo__title {
+    margin-bottom: 6px;
+  }
+
+  .promo__image {
+    height: 353px;
+    background-image: url(../img/bg/promo-bg-mobile.jpg);
+  }
+
+  .socials__item {
+    margin-right: 12px;
   }
 }
 

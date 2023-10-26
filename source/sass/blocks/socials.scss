@@ -1,0 +1,21 @@
+.socials {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    margin-right: 20px;
+    @include vp-374 {
+      margin-right: 12px;
+    }
+  }
+  svg #circle {
+    transition: fill $trans-default;
+  }
+  .socials__link:hover > svg #circle {
+    fill: $color-scarlet;
+  }
+}

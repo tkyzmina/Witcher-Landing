@@ -1,0 +1,79 @@
+.promo {
+  position: relative;
+
+  .container:first-of-type {
+    padding: 0;
+  }
+
+  .container:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__content {
+    max-width: 36%;
+    min-width: 410px;
+    padding-top: 104px;
+    padding-bottom: 100px;
+
+    @include vp-1023 {
+      max-width: 50%;
+      padding-top: 60px;
+      padding-bottom: 92px;
+    }
+
+    @include vp-767 {
+      min-width: 300px;
+    }
+
+    @include vp-374 {
+      max-width: 80%;
+      min-width: 0;
+      padding-top: 56px;
+      padding-bottom: 73px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @include vp-1023 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-374 {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    @include vp-1023 {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 440px;
+    background-image: url(../img/bg/promo-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    @include vp-1023 {
+      height: 360px;
+      background-image: url(../img/bg/promo-bg-tablet.jpg);
+    }
+
+    @include vp-374 {
+      height: 353px;
+      background-image: url(../img/bg/promo-bg-mobile.jpg);
+    }
+  }
+}

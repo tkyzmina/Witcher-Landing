@@ -15,12 +15,26 @@
   &--red {
     background-color: $color-torch-red;
   }
+
   &--primary {
     background-color: $color-cinnabar;
   }
+
   &--secondary {
     background-color: rgba($color: $color-cinnabar, $alpha: 0.15);
     border: 1px solid rgba($color: $color-cinnabar, $alpha: 0.8);
+  }
+
+  &--md {
+    padding: 16px 42px;
+
+    @include vp-1023 {
+      padding: 16px 40px;
+    }
+
+    @include vp-374 {
+      padding: 14px 34px;
+    }
   }
 
   &:disabled {

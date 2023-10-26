@@ -20,24 +20,57 @@
     })
 
     <main>
-      <div class="container">
-        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-open-modal="success">modal--success link</a></p>
-      </div>
-    </main>
+      <section class="promo">
+        <div class="container">
+          <div class="promo__image"></div>
+        </div>
+        <!-- <div class="promo__image">
+              <picture>
+                <source type="image/webp" srcset="img/bg/promo-bg-mobile.webp, img/bg/promo-bg-mobile@2x.webp 2x"
+                  media="(max-width: 360px)">
+                <source type="image/webp" srcset="img/bg/promo-bg-tablet.webp, img/bg/promo-bg-tablet@2x.webp 2x"
+                  media="(max-width: 768px)">
+                <source type="image/webp" srcset="img/bg/promo-bg.webp, img/bg/promo-bg@2x.webp 2x">
 
-    @@include("source/html/base/footer.html")
+                <source srcset="img/bg/promo-bg-mobile.jpg, img/bg/promo-bg-mobile@2x.jpg 2x"
+                  media="(max-width: 360px)">
+                <source srcset="img/bg/promo-bg-tablet.jpg, img/bg/promo-bg-tablet@2x.jpg 2x"
+                  media="(max-width: 768px)">
+                <img src="img/bg/promo-bg.jpg" srcset="img/bg/promo-bg@2x.jpg 2x" alt="Баннер Ведьмак" width="1440"
+                  height="440">
+              </picture>
+            </div> -->
 
-    @@include("source/html/base/modal.html", {
-    "name": "feedback"
-    })
 
-    @@include("source/html/base/modal.html", {
-    "name": "success",
-    "fitContent": true,
-    "noScale": true,
-    "mod": "some-mod"
-    })
+        <div class="container">
+          <div class="promo__content">
+            <h1 class="promo__title h1">Сериал Ведьмак</h1>
+            <p class="promo__text text">Геральт из Ривии, наемный охотник за чудовищами, перенесший мутации, идет
+              навстречу своей судьбе в
+              неспокойном мире, где люди часто оказываются куда коварнее чудовищ.</p>
+            <a class="btn btn--primary btn--md" href="#">Смотреть сериал</a>
+          </div>
+        </div>
+  </div>
+  </section>
+  <div class="container">
+    <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+    <p><a href="#" data-open-modal="success">modal--success link</a></p>
+  </div>
+  </main>
+
+  @@include("source/html/base/footer.html")
+
+  @@include("source/html/base/modal.html", {
+  "name": "feedback"
+  })
+
+  @@include("source/html/base/modal.html", {
+  "name": "success",
+  "fitContent": true,
+  "noScale": true,
+  "mod": "some-mod"
+  })
   </div>
 
   <script src="js/vendor.min.js"></script>

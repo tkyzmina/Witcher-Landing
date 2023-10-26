@@ -1,5 +1,5 @@
 .header {
-  padding: 22px 0;
+  padding: 22px 0 20px;
 
   background-color: $color-default-black;
 
@@ -10,6 +10,7 @@
 
   &__logo {
     color: $color-default-white;
+
     @include vp-767 {
       width: 106px;
       height: 36px;
@@ -32,6 +33,7 @@
   @include vp-1023 {
     padding: 13px 0;
   }
+
   @include vp-374 {
     padding: 16px 0;
   }
