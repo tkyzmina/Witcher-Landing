@@ -1,5 +1,7 @@
 .btn {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 32px;
 
   font-weight: 500;
@@ -35,6 +37,9 @@
     @include vp-374 {
       padding: 14px 34px;
     }
+  }
+  &--100w {
+    width: 100%;
   }
 
   &:disabled {

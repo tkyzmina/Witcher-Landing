@@ -57,3 +57,10 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+section {
+  margin-bottom: 72px;
+  @include vp-1023 {
+    margin-bottom: 64px;
+  }
+}

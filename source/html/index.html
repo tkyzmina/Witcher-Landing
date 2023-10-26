@@ -24,24 +24,6 @@
         <div class="container">
           <div class="promo__image"></div>
         </div>
-        <!-- <div class="promo__image">
-              <picture>
-                <source type="image/webp" srcset="img/bg/promo-bg-mobile.webp, img/bg/promo-bg-mobile@2x.webp 2x"
-                  media="(max-width: 360px)">
-                <source type="image/webp" srcset="img/bg/promo-bg-tablet.webp, img/bg/promo-bg-tablet@2x.webp 2x"
-                  media="(max-width: 768px)">
-                <source type="image/webp" srcset="img/bg/promo-bg.webp, img/bg/promo-bg@2x.webp 2x">
-
-                <source srcset="img/bg/promo-bg-mobile.jpg, img/bg/promo-bg-mobile@2x.jpg 2x"
-                  media="(max-width: 360px)">
-                <source srcset="img/bg/promo-bg-tablet.jpg, img/bg/promo-bg-tablet@2x.jpg 2x"
-                  media="(max-width: 768px)">
-                <img src="img/bg/promo-bg.jpg" srcset="img/bg/promo-bg@2x.jpg 2x" alt="Баннер Ведьмак" width="1440"
-                  height="440">
-              </picture>
-            </div> -->
-
-
         <div class="container">
           <div class="promo__content">
             <h1 class="promo__title h1">Сериал Ведьмак</h1>
@@ -51,26 +33,84 @@
             <a class="btn btn--primary btn--md" href="#">Смотреть сериал</a>
           </div>
         </div>
-  </div>
-  </section>
-  <div class="container">
-    <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-    <p><a href="#" data-open-modal="success">modal--success link</a></p>
-  </div>
-  </main>
+      </section>
+      <section class="gallery">
+        <div class="container">
+          <h2 class="gallery__title h2">Кадры со съемок</h2>
+          <div class="gallery__inner">
 
-  @@include("source/html/base/footer.html")
+            <picture class="gallery__item gallery__item--1">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-mobile-1.webp, img/gallery/gallery-mobile-1@2x.webp 2x"
+                media="(max-width: 767px)">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-desktop-1.webp, img/gallery/gallery-desktop-1@2x.webp 2x">
+              <source srcset="img/gallery/gallery-mobile-1.jpg, img/gallery/gallery-mobile-1@2x.png 2x"
+                media="(max-width: 767px)">
+              <img src="img/gallery/gallery-desktop-1.jpg" srcset="img/gallery/gallery-desktop-1@2x.jpg 2x"
+                alt="Изображение со съемок" width="588" height="588">
+            </picture>
 
-  @@include("source/html/base/modal.html", {
-  "name": "feedback"
-  })
+            <picture class="gallery__item gallery__item--2">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-mobile-2.webp, img/gallery/gallery-mobile-2@2x.webp 2x"
+                media="(max-width: 767px)">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-desktop-2.webp, img/gallery/gallery-desktop-2@2x.webp 2x">
+              <source srcset="img/gallery/gallery-mobile-2.jpg, img/gallery/gallery-mobile-2@2x.png 2x"
+                media="(max-width: 767px)">
+              <img src="img/gallery/gallery-desktop-2.jpg" srcset="img/gallery/gallery-desktop-2@2x.jpg 2x"
+                alt="Изображение со съемок" width="282" height="282">
+            </picture>
 
-  @@include("source/html/base/modal.html", {
-  "name": "success",
-  "fitContent": true,
-  "noScale": true,
-  "mod": "some-mod"
-  })
+            <picture class="gallery__item gallery__item--3">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-mobile-3.webp, img/gallery/gallery-mobile-3@2x.webp 2x"
+                media="(max-width: 767px)">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-desktop-3.webp, img/gallery/gallery-desktop-3@2x.webp 2x">
+              <source srcset="img/gallery/gallery-mobile-3.jpg, img/gallery/gallery-mobile-3@2x.png 2x"
+                media="(max-width: 767px)">
+              <img src="img/gallery/gallery-desktop-3.jpg" srcset="img/gallery/gallery-desktop-3@2x.jpg 2x"
+                alt="Изображение со съемок" width="282" height="282">
+            </picture>
+
+            <picture class="gallery__item gallery__item--4">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-desktop-4.webp, img/gallery/gallery-desktop-4@2x.webp 2x">
+              <img src="img/gallery/gallery-desktop-4.jpg" srcset="img/gallery/gallery-desktop-4@2x.jpg 2x"
+                alt="Изображение со съемок" width="282" height="282">
+            </picture>
+
+            <picture class="gallery__item gallery__item--5">
+              <source type="image/webp"
+                srcset="img/gallery/gallery-desktop-5.webp, img/gallery/gallery-desktop-5@2x.webp 2x">
+              <img src="img/gallery/gallery-desktop-5.jpg" srcset="img/gallery/gallery-desktop-5@2x.jpg 2x"
+                alt="Изображение со съемок" width="282" height="282">
+            </picture>
+          </div>
+          <button class="btn btn--secondary btn--100w" type="button">Показать еще</button>
+        </div>
+      </section>
+
+      <div class="container">
+        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-open-modal="success">modal--success link</a></p>
+      </div>
+    </main>
+
+    @@include("source/html/base/footer.html")
+
+    @@include("source/html/base/modal.html", {
+    "name": "feedback"
+    })
+
+    @@include("source/html/base/modal.html", {
+    "name": "success",
+    "fitContent": true,
+    "noScale": true,
+    "mod": "some-mod"
+    })
   </div>
 
   <script src="js/vendor.min.js"></script>

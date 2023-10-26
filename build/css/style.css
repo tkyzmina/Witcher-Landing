@@ -615,6 +615,10 @@ button,
   transition: none !important;
 }
 
+section {
+  margin-bottom: 72px;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -629,6 +633,15 @@ button,
   font-size: 56px;
   font-style: normal;
   line-height: 56px;
+}
+
+.h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 50px;
 }
 
 .text {
@@ -836,6 +849,12 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 12px 32px;
   font-weight: 500;
   color: #ffffff;
@@ -863,6 +882,10 @@ button,
 
 .btn--md {
   padding: 16px 42px;
+}
+
+.btn--100w {
+  width: 100%;
 }
 
 .btn:disabled {
@@ -943,6 +966,76 @@ button,
   fill: #ff1e1e;
 }
 
+.gallery__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(148px, 1fr))[4];
+  grid-template-columns: repeat(4, minmax(148px, 1fr));
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 32px;
+}
+
+.gallery__title {
+  margin-bottom: 40px;
+}
+
+.gallery__item--1 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+}
+
+.gallery__item--2 {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+.gallery__item--3 {
+  -ms-grid-column: 4;
+  grid-column-start: 4;
+  -ms-grid-column-span: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+.gallery__item--4 {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
+.gallery__item--4 {
+  -ms-grid-column: 4;
+  grid-column-start: 4;
+  -ms-grid-column-span: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -991,12 +1084,21 @@ button,
 }
 
 @media (max-width: 1023px) {
+  section {
+    margin-bottom: 64px;
+  }
+
   .container {
     padding: 0 64px;
   }
 
   .h1 {
     font-size: 40px;
+    line-height: 40px;
+  }
+
+  .h2 {
+    font-size: 32px;
     line-height: 40px;
   }
 
@@ -1025,6 +1127,15 @@ button,
   .promo__image {
     height: 360px;
     background-image: url(../img/bg/promo-bg-tablet.jpg);
+  }
+
+  .gallery__inner {
+    grid-gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .gallery__title {
+    margin-bottom: 24px;
   }
 }
 
@@ -1079,12 +1190,68 @@ button,
   .promo__content {
     min-width: 300px;
   }
+
+  .gallery__inner {
+    gap: 16px 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[3];
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .gallery__item--1,
+  .gallery__item--2,
+  .gallery__item--3 {
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
+
+  .gallery__item--1 img,
+  .gallery__item--2 img,
+  .gallery__item--3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery__item--1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+
+  .gallery__item--2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+  }
+
+  .gallery__item--3 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2;
+  }
+
+  .gallery__item--4,
+  .gallery__item--5 {
+    display: none;
+  }
 }
 
 @media (max-width: 374px) {
   .h1 {
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .h2 {
+    font-size: 28px;
+    line-height: 36px;
   }
 
   .header .btn {
