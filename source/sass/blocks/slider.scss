@@ -1,0 +1,31 @@
+.slider {
+  .container {
+    position: relative;
+  }
+  &__btn-container {
+    position: absolute;
+    top: 3px;
+    right: 115px;
+    display: flex;
+    gap: 24px;
+    padding: 5px;
+    @include vp-1023 {
+      top: -6px;
+      right: 11px;
+      gap: 12px;
+    }
+  }
+}
+.swiper-slide {
+  width: 282px;
+}
+.swiper-button-disabled {
+  svg {
+    fill: rgba($color: $color-default-white, $alpha: 0.1);
+  }
+  &:hover svg {
+    fill: rgba($color: $color-default-white, $alpha: 0.1);
+    filter: none;
+    cursor: auto;
+  }
+}

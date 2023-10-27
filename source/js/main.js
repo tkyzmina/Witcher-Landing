@@ -1,21 +1,47 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from "./utils/ios-vh-fix";
+import { initModals } from "./modules/modals/init-modals";
 
 // ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
-
+window.addEventListener("DOMContentLoaded", () => {
   // Utils
   // ---------------------------------
 
   iosVhFix();
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 4,
+    spaceBetween: 24,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+    },
+    navigation: {
+      nextEl: ".btn--next",
+      prevEl: ".btn--prev",
+    },
+  });
 
   // Modules
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     initModals();
   });
 });
