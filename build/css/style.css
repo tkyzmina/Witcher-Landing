@@ -1616,6 +1616,7 @@ section {
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  color: #000000;
 }
 
 .modal::-webkit-scrollbar {
@@ -1651,8 +1652,8 @@ section {
 
 .modal__content {
   position: relative;
-  width: 600px;
-  padding: 40px;
+  width: 80%;
+  padding: 56px 80px;
   background-color: #ffffff;
 }
 
@@ -1670,7 +1671,7 @@ section {
 }
 
 .modal--responsive .modal__content {
-  width: 100%;
+  width: 77%;
 }
 
 .modal--fit-content .modal__content {
@@ -1695,6 +1696,47 @@ section {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal__title {
+  margin-bottom: 32px;
+  color: #000000;
+}
+
+.modal__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: list;
+}
+
+.modal__list li {
+  position: relative;
+  text-indent: 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.modal__list li::before {
+  content: counter(list) ".";
+  counter-increment: list;
+  position: absolute;
+  display: block;
+  left: -15px;
+  top: 0;
+}
+
+.modal__list li:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.modal__list p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .btn {
@@ -2200,6 +2242,15 @@ section {
     padding: 13px 0;
   }
 
+  .modal__content {
+    width: 100%;
+    padding: 48px 40px;
+  }
+
+  .modal__title {
+    margin-bottom: 24px;
+  }
+
   .btn--md {
     padding: 16px 40px;
   }
@@ -2288,16 +2339,20 @@ section {
   }
 
   .modal__wrapper {
-    padding: 60px 16px;
+    padding: 0;
   }
 
   .modal__content {
     width: 100%;
-    padding: 20px;
+    padding: 24px 16px;
   }
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .modal__list li:not(:last-child) {
+    margin-bottom: 24px;
   }
 
   .btn--prev,
