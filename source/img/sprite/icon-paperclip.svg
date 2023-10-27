@@ -1,0 +1,10 @@
+<svg fill="none" viewBox="0 0 24 24">
+  <g clip-path="url(#a)" opacity=".8">
+    <path fill="#fff" d="m20.32 10.33-7.46 9.4a5 5 0 0 1-7.83-6.22l7.46-9.4a3 3 0 0 1 4.7 3.73l-5.6 7.05a1 1 0 0 1-1.56-1.24L15 7.38l-1.56-1.24-4.98 6.26a3 3 0 1 0 4.7 3.73l5.6-7.04a5 5 0 0 0-7.83-6.22l-7.47 9.4a7 7 0 0 0 10.97 8.7l7.46-9.4-1.57-1.24Z"/>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <rect width="24" height="24" fill="#fff" rx="1"/>
+    </clipPath>
+  </defs>
+</svg>

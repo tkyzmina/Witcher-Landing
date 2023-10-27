@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    @@include("source/html/base/head.html")
+    <title>Witcher</title>
+
+</head>
+
+<body>
+
+    <div style="display: none;">
+        @@include("build/img/sprite_auto.svg")
+    </div>
+
+    <div class="wrapper">
+        @@include("source/html/base/header.html", {
+        "index": false
+        })
+
+        <main>
+            <section class="subscribe">
+                <div class="container">
+                    <h1 class="subscribe__title h1">Оставьте заявку</h1>
+                    <div class="subscribe__inner">
+                        <div class="subscribe__form">
+                            <form action="">
+                                <div class="custom-input__group">
+
+                                    <div class="custom-input  custom-input--email">
+                                        <div class="custom-input__wrapper">
+                                            <input type="email" name="reg-email" id="reg-email" required="" value=""
+                                                placeholder="Email" aria-label="Email">
+                                            <span class="custom-input__error">Поле не заполненно</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-input  custom-input--text">
+                                        <div class="custom-input__wrapper">
+                                            <input type="text" name="name" id="name" required="" value=""
+                                                placeholder="Имя">
+                                            <span class="custom-input__error">Поле не заполненно</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-input  custom-input--upload">
+                                        <div class="custom-input__wrapper">
+                                            <input type="file" name="file" id="file" required="" value=""
+                                                placeholder="Прикрепите файл">
+                                            <label for="file">
+                                                <span>Прикрепите&nbsp;файл</span>
+                                                <svg width="24" height="24">
+                                                    <use xlink:href="#icon-paperclip"></use>
+                                                </svg>
+                                            </label>
+                                            <span class="custom-input__error">Поле не заполненно</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="custom-input  custom-input--checkbox">
+                                        <div class="custom-input__wrapper">
+                                            <input type="checkbox" id="agreement" name="agreement" value="">
+                                            <label for="agreement">
+                                                Даю согласие на обработку своих персональных данных
+                                            </label>
+                                            <span class="custom-input__error">Поле не заполненно</span>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn--primary" type="submit">Оставить заявку</button>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="subscribe__contacts">
+                            <div class="subscribe__contacts-field">
+                                <p class="subscribe__text">Наша горячая линия</p>
+                                <a class="subscribe__data" href="tel:88003823112">8 800 38 23 112</a>
+                            </div>
+                            <div class="subscribe__contacts-field">
+                                <p class="subscribe__text">Главный офис</p>
+                                <p class="subscribe__data">г. Москва</a>
+                                <p class="subscribe__data">Садовническая ул., 80</a>
+                            </div>
+                            <div class="subscribe__contacts-field">
+                                <p class="subscribe__text">Часы работы</p>
+                                <p class="subscribe__data">Пн-Пт с 10:00 до 22:00</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include("source/html/base/footer.html")
+
+        @@include("source/html/base/modal.html", {
+        "name": "feedback"
+        })
+
+        @@include("source/html/base/modal.html", {
+        "name": "success",
+        "fitContent": true,
+        "noScale": true,
+        "mod": "some-mod"
+        })
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

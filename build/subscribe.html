@@ -46,128 +46,73 @@
   <div class="wrapper">
     <header class="header ">
       <div class="container">
-        <a class="header__logo" href="#" aria-label="Главная страница">
+        <a class="header__logo" href="index.html" aria-label="Переход на главную">
           <picture>
             <source type="image/webp" srcset="img/content/logo-desktop.webp, img/content/logo-desktop@2x.webp 2x">
             <img src="img/content/logo-desktop.png" srcset="img/content/logo-desktop@2x.png 2x" width="130" height="44" alt="Logo Witcher">
           </picture>
         </a>
-        <a class="btn btn--secondary" href="subscribe.html" type="button">Подключить подписку</a>
       </div>
     </header>
     <main>
-      <section class="promo">
+      <section class="subscribe">
         <div class="container">
-          <div class="promo__image"></div>
-        </div>
-        <div class="container">
-          <div class="promo__content">
-            <h1 class="promo__title h1">Сериал Ведьмак</h1>
-            <p class="promo__text text">Геральт из Ривии, наемный охотник за чудовищами, перенесший мутации, идет
-              навстречу своей судьбе в
-              неспокойном мире, где люди часто оказываются куда коварнее чудовищ.</p>
-            <a class="btn btn--primary btn--md" href="#">Смотреть сериал</a>
-          </div>
-        </div>
-      </section>
-      <section class="slider">
-        <div class="container">
-          <h2 class="gallery__title h2">Актерский состав</h2>
-          <!-- Slider main container -->
-          <div class="slider__btn-container">
-            <div class="btn btn--prev">
-              <svg viewBox="0 0 32 32" width="32" height="32">
-                <path d="M7.72 15.12 22.52.36a1.24 1.24 0 0 1 1.76 1.76L10.36 16l13.92 13.88a1.24 1.24 0 1 1-1.76 1.76L7.72 16.88a1.24 1.24 0 0 1 0-1.76Z" />
-              </svg>
+          <h1 class="subscribe__title h1">Оставьте заявку</h1>
+          <div class="subscribe__inner">
+            <div class="subscribe__form">
+              <form action="">
+                <div class="custom-input__group">
+                  <div class="custom-input  custom-input--email">
+                    <div class="custom-input__wrapper">
+                      <input type="email" name="reg-email" id="reg-email" required="" value="" placeholder="Email" aria-label="Email">
+                      <span class="custom-input__error">Поле не заполненно</span>
+                    </div>
+                  </div>
+                  <div class="custom-input  custom-input--text">
+                    <div class="custom-input__wrapper">
+                      <input type="text" name="name" id="name" required="" value="" placeholder="Имя">
+                      <span class="custom-input__error">Поле не заполненно</span>
+                    </div>
+                  </div>
+                  <div class="custom-input  custom-input--upload">
+                    <div class="custom-input__wrapper">
+                      <input type="file" name="file" id="file" required="" value="" placeholder="Прикрепите файл">
+                      <label for="file">
+                        <span>Прикрепите&nbsp;файл</span>
+                        <svg width="24" height="24">
+                          <use xlink:href="#icon-paperclip"></use>
+                        </svg>
+                      </label>
+                      <span class="custom-input__error">Поле не заполненно</span>
+                    </div>
+                  </div>
+                  <div class="custom-input  custom-input--checkbox">
+                    <div class="custom-input__wrapper">
+                      <input type="checkbox" id="agreement" name="agreement" value="">
+                      <label for="agreement">
+                        Даю согласие на обработку своих персональных данных
+                      </label>
+                      <span class="custom-input__error">Поле не заполненно</span>
+                    </div>
+                  </div>
+                  <button class="btn btn--primary" type="submit">Оставить заявку</button>
+                </div>
+              </form>
             </div>
-            <div class="btn btn--next">
-              <svg viewBox="0 0 32 32" width="32" height="32">
-                <path d="M24.28 15.12 9.48.36a1.24 1.24 0 0 0-1.76 1.76L21.64 16 7.72 29.88a1.24 1.24 0 1 0 1.75 1.76l14.8-14.76a1.24 1.24 0 0 0 0-1.76Z" />
-              </svg>
-            </div>
-          </div>
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <picture class="">
-                  <img src="img/slides/slide-1.jpg" srcset="img/slides/slide-1@2x.jpg 2x" alt="Изображение актера" width="282" height="400">
-                </picture>
+            <div class="subscribe__contacts">
+              <div class="subscribe__contacts-field">
+                <p class="subscribe__text">Наша горячая линия</p>
+                <a class="subscribe__data" href="tel:88003823112">8 800 38 23 112</a>
               </div>
-              <div class="swiper-slide">
-                <picture class="">
-                  <img src="img/slides/slide-2.jpg" srcset="img/slides/slide-2@2x.jpg 2x" alt="Изображение актера" width="282" height="400">
-                </picture>
+              <div class="subscribe__contacts-field">
+                <p class="subscribe__text">Главный офис</p>
+                <p class="subscribe__data">г. Москва</a>
+                <p class="subscribe__data">Садовническая ул., 80</a>
               </div>
-              <div class="swiper-slide">
-                <picture class="">
-                  <img src="img/slides/slide-3.jpg" srcset="img/slides/slide-3@2x.jpg 2x" alt="Изображение актера" width="282" height="400">
-                </picture>
+              <div class="subscribe__contacts-field">
+                <p class="subscribe__text">Часы работы</p>
+                <p class="subscribe__data">Пн-Пт с 10:00 до 22:00</a>
               </div>
-              <div class="swiper-slide">
-                <picture class="">
-                  <img src="img/slides/slide-4.jpg" srcset="img/slides/slide-4@2x.jpg 2x" alt="Изображение актера" width="282" height="400">
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture class="">
-                  <img src="img/slides/slide-5.jpg" srcset="img/slides/slide-5@2x.jpg 2x" alt="Изображение актера" width="282" height="400">
-                </picture>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="gallery">
-        <div class="container">
-          <h2 class="gallery__title h2">Кадры со съемок</h2>
-          <div class="gallery__inner">
-            <picture class="gallery__item gallery__item--1">
-              <source type="image/webp" srcset="img/gallery/gallery-mobile-1.webp, img/gallery/gallery-mobile-1@2x.webp 2x" media="(max-width: 767px)">
-              <source type="image/webp" srcset="img/gallery/gallery-desktop-1.webp, img/gallery/gallery-desktop-1@2x.webp 2x">
-              <source srcset="img/gallery/gallery-mobile-1.jpg, img/gallery/gallery-mobile-1@2x.png 2x" media="(max-width: 767px)">
-              <img src="img/gallery/gallery-desktop-1.jpg" srcset="img/gallery/gallery-desktop-1@2x.jpg 2x" alt="Изображение со съемок" width="588" height="588">
-            </picture>
-            <picture class="gallery__item gallery__item--2">
-              <source type="image/webp" srcset="img/gallery/gallery-mobile-2.webp, img/gallery/gallery-mobile-2@2x.webp 2x" media="(max-width: 767px)">
-              <source type="image/webp" srcset="img/gallery/gallery-desktop-2.webp, img/gallery/gallery-desktop-2@2x.webp 2x">
-              <source srcset="img/gallery/gallery-mobile-2.jpg, img/gallery/gallery-mobile-2@2x.png 2x" media="(max-width: 767px)">
-              <img src="img/gallery/gallery-desktop-2.jpg" srcset="img/gallery/gallery-desktop-2@2x.jpg 2x" alt="Изображение со съемок" width="282" height="282">
-            </picture>
-            <picture class="gallery__item gallery__item--3">
-              <source type="image/webp" srcset="img/gallery/gallery-mobile-3.webp, img/gallery/gallery-mobile-3@2x.webp 2x" media="(max-width: 767px)">
-              <source type="image/webp" srcset="img/gallery/gallery-desktop-3.webp, img/gallery/gallery-desktop-3@2x.webp 2x">
-              <source srcset="img/gallery/gallery-mobile-3.jpg, img/gallery/gallery-mobile-3@2x.png 2x" media="(max-width: 767px)">
-              <img src="img/gallery/gallery-desktop-3.jpg" srcset="img/gallery/gallery-desktop-3@2x.jpg 2x" alt="Изображение со съемок" width="282" height="282">
-            </picture>
-            <picture class="gallery__item gallery__item--4">
-              <source type="image/webp" srcset="img/gallery/gallery-desktop-4.webp, img/gallery/gallery-desktop-4@2x.webp 2x">
-              <img src="img/gallery/gallery-desktop-4.jpg" srcset="img/gallery/gallery-desktop-4@2x.jpg 2x" alt="Изображение со съемок" width="282" height="282">
-            </picture>
-            <picture class="gallery__item gallery__item--5">
-              <source type="image/webp" srcset="img/gallery/gallery-desktop-5.webp, img/gallery/gallery-desktop-5@2x.webp 2x">
-              <img src="img/gallery/gallery-desktop-5.jpg" srcset="img/gallery/gallery-desktop-5@2x.jpg 2x" alt="Изображение со съемок" width="282" height="282">
-            </picture>
-          </div>
-          <button class="btn btn--secondary btn--100w" type="button">Показать еще</button>
-        </div>
-      </section>
-      <section class="map">
-        <div class="container">
-          <h2 class="gallery__title h2">Магазины мерча ведьмака</h2>
-        </div>
-        <div class="container">
-          <div class="map__img-wrapper">
-            <div class="map__img-container">
-              <picture>
-                <source type="image/webp" srcset="img/map/map-mobile.webp, img/map/map-mobile@2x.webp 2x" media="(max-width: 360px)">
-                <source type="image/webp" srcset="img/map/map-tablet.webp, img/map/map-tablet@2x.webp 2x" media="(max-width: 768px)">
-                <source type="image/webp" srcset="img/map/map.webp, img/map/map@2x.webp 2x">
-                <source srcset="img/map/map-mobile.png, img/map/map-mobile@2x.png 2x" media="(max-width: 360px)">
-                <source srcset="img/map/map-tablet.png, img/map/map-tablet@2x.png 2x" media="(max-width: 768px)">
-                <img src="img/map/map.png" srcset="img/map/map@2x.png 2x" alt="Изображение карты магазинов" width="1201" height="540">
-              </picture>
             </div>
           </div>
         </div>
