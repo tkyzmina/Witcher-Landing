@@ -1846,7 +1846,7 @@ section {
   transition: fill 0.3s ease;
 }
 
-.socials .socials__link:hover > svg #circle {
+.socials .socials__link:hover > svg .socials__circle {
   fill: #ff1e1e;
 }
 

@@ -15,7 +15,7 @@
   svg #circle {
     transition: fill $trans-default;
   }
-  .socials__link:hover > svg #circle {
+  .socials__link:hover > svg .socials__circle {
     fill: $color-scarlet;
   }
 }
