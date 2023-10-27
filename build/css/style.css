@@ -1137,6 +1137,10 @@ section {
   .gallery__title {
     margin-bottom: 24px;
   }
+
+  .map .container:last-of-type {
+    padding: 0;
+  }
 }
 
 @media (max-width: 767px) {

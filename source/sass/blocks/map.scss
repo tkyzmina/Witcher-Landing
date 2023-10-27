@@ -1,0 +1,7 @@
+.map {
+  @include vp-1023 {
+    .container:last-of-type {
+      padding: 0;
+    }
+  }
+}
